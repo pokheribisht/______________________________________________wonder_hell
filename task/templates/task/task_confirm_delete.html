@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- task_confirm_delete.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Confirm Deletion</h1>
+    <p>Are you sure you want to delete the task "?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Confirm">
+       
+    </form>
+{% endblock %}
+
+</body>
+</html>

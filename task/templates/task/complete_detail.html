@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Detail </title>
+</head>
+<body>
+        {% extends "base.html" %}
+        {% block content %}
+            <b> HERE IS THE DETAILS TASK INFORMATION OF THE TASK::  {{task.name}}  <b> <br> 
+                <label> Name : </label> 
+                 <span>{{task.name}} </span>
+                 <hr> 
+                 <label> Title : </label> 
+                 <span> {{task.title}} </span> 
+                 <hr> 
+                 <label> Created_Date : </label> 
+                 <span> {{task.created_date}} </span> 
+                 <hr> 
+                 <label> Priority :  </label> 
+                 <span> {{task.Priority}} </span> <br>
+
+                 <button> <a href ="{% url 't_details' %}" style="text-decoration: none; color: black ;"> Back </a> </button>    |
+                 
+                <button> <a href="{% url 'home' %}  " style="text-decoration: none; color: black ;"> Go Home </a> </button> 
+
+
+        {% endblock  %}
+</body>
+</html>

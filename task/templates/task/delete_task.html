@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete the task </title>
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+
+
+        <div> {% for item  in data %}
+                    <div>Name ------ {{item.name}} | Title ------ {{item.title}}        <button> <a href= "{% url 'delete-the-task'  item.id %}" style="text-decoration: none; color: black;">Delete Task </a></button></div>
+                    <hr>
+                    
+        {% endfor %}
+        </div> 
+
+        <button> <a href="{% url 'home' %}  " style="text-decoration: none; color: black ;"> Go Home </a> </button> 
+        
+
+
+    {% endblock  %}
+</body>
+</html>
