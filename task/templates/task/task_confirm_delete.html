@@ -10,7 +10,7 @@
 
 {% block content %}
     <h1>Confirm Deletion</h1>
-    <p>Are you sure you want to delete the task "?</p>
+    <p>Are you sure you want to delete the task  {{data.name}}"?</p>
     <form method="post">
         {% csrf_token %}
         <input type="submit" value="Confirm">
